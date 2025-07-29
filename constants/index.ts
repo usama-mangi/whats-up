@@ -1,11 +1,16 @@
 import archive from "@/assets/icons/archive.png";
 import arrowBack from "@/assets/icons/arrow-back.png";
 import camera from "@/assets/icons/camera.png";
-import chatBubble from "@/assets/icons/chat-bubble.png";
+import chatBubbleFilled from "@/assets/icons/chat-bubble-filled.png";
+import chatBubbleOutlined from "@/assets/icons/chat-bubble-outlined.png";
 import chevronRight from "@/assets/icons/chevron-right.png";
 import ellipsis from "@/assets/icons/ellipsis-vertical.png";
+import heart from "@/assets/icons/heart.png";
+import incoming from "@/assets/icons/incoming.png";
+import lock from "@/assets/icons/lock.png";
 import logout from "@/assets/icons/logout.png";
 import minus from "@/assets/icons/minus.png";
+import outgoing from "@/assets/icons/outgoing.png";
 import pencil from "@/assets/icons/pencil.png";
 import phone from "@/assets/icons/phone.png";
 import plus from "@/assets/icons/plus.png";
@@ -19,6 +24,7 @@ import avatar from "@/assets/images/avatar.png";
 import statusBg from "@/assets/images/status.jpg";
 import success from "@/assets/images/success.png";
 import {
+  Call,
   Category,
   Channel,
   Chat,
@@ -534,16 +540,64 @@ export const communities: Community[] = [
   },
 ];
 
+export const calls: Call[] = [
+  {
+    user: {
+      name: "Shahzeb",
+      picSource: avatar,
+    },
+    count: 2,
+    incoming: true,
+    missed: true,
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+  {
+    user: {
+      name: "Samian",
+      picSource: avatar,
+    },
+    count: 1,
+    incoming: true,
+    missed: false,
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+  {
+    user: {
+      name: "Soban",
+      picSource: avatar,
+    },
+    count: 4,
+    incoming: false,
+    missed: true,
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+  {
+    user: {
+      name: "Ghulam Mustafa",
+      picSource: avatar,
+    },
+    count: 5,
+    incoming: true,
+    missed: true,
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+];
+
 export const images = {
   archive,
   arrowBack,
   avatar,
   camera,
-  chatBubble,
+  chatBubbleFilled,
+  chatBubbleOutlined,
   chevronRight,
   ellipsis,
+  heart,
+  incoming,
+  lock,
   logout,
   minus,
+  outgoing,
   pencil,
   phone,
   plus,

@@ -1,12 +1,13 @@
 import { Category } from "@/type";
 import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
-import { Text, FlatList, TouchableOpacity, Platform } from "react-native";
+import { Text, FlatList, TouchableOpacity, Image } from "react-native";
 import cn from "clsx";
+import { images } from "@/constants";
 
 function Filter({ categories }: { categories: Category[] }) {
   const searchParms = useLocalSearchParams();
-  const [active, setActive] = useState(searchParms.category || "");
+  const [active, setActive] = useState(searchParms.category || "All");
 
   function handlePress(id: string) {
     setActive(id);
@@ -21,7 +22,7 @@ function Filter({ categories }: { categories: Category[] }) {
       keyExtractor={(item) => item.title}
       horizontal
       showsHorizontalScrollIndicator={false}
-      contentContainerClassName="gap-2 my-3"
+      contentContainerClassName="gap-2 my-3 px-5"
       renderItem={({ item }) => (
         <TouchableOpacity
           className={cn(
@@ -40,6 +41,14 @@ function Filter({ categories }: { categories: Category[] }) {
           </Text>
         </TouchableOpacity>
       )}
+      ListFooterComponent={
+        <TouchableOpacity
+          className="filter py-2.5 px-5"
+          onPress={() => console.log("Add category")}
+        >
+          <Image source={images.plus} className="size-3" tintColor="#444" />
+        </TouchableOpacity>
+      }
     />
   );
 }

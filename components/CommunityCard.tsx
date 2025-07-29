@@ -23,13 +23,13 @@ export default function CommunityCard({ community }: { community: Community }) {
 
       <View className="h-[0.1rem] bg-[#eee]" />
 
-      <View className="px-5">
+      <View>
         <ChatItem chat={community.chats[0]} />
         {community.chats.length > 1 && <ChatItem chat={community.chats[1]} />}
 
         {community.chats.length > 2 && (
           <TouchableWithoutFeedback>
-            <View className="flex flex-row gap-4 items-center py-[0.225rem]">
+            <View className="flex flex-row gap-4 items-center px-5 py-[0.225rem]">
               <View className="flex items-center justify-center size-14">
                 <Image
                   source={images.chevronRight}

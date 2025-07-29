@@ -10,20 +10,20 @@ export default function Updates() {
     <SafeAreaView className="h-full bg-white">
       <CustomHeader title="Updates" rightIcon={images.search} />
 
-      <View className="mt-4 px-5 flex flex-col">
-        <Text className="text-2xl font-medium">Status</Text>
+      <View className="mt-4 flex flex-col">
+        <Text className="text-2xl font-medium mx-5">Status</Text>
 
         <FlatList
-          data={statuses}
-          contentContainerClassName="my-4 gap-1.5"
           horizontal
           showsHorizontalScrollIndicator={false}
+          data={statuses}
+          contentContainerClassName="my-4 gap-1.5 px-5"
           renderItem={({ item }) => <StatusCard status={item} />}
         />
       </View>
 
-      <View className="mt-2 px-5 flex">
-        <View className="flex flex-row justify-between items-center">
+      <View className="mt-2 flex">
+        <View className="flex flex-row justify-between items-center mx-5">
           <Text className="text-2xl font-medium">Channels</Text>
           <TouchableOpacity className="bg-[#f5f5f5] px-5 py-2 rounded-full">
             <Text className="font-medium">Explore</Text>
@@ -31,6 +31,7 @@ export default function Updates() {
         </View>
 
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={channels}
           contentContainerClassName="mt-1"
           renderItem={({ item }) => <ChatItem chat={item} />}

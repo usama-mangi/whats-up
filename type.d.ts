@@ -160,3 +160,14 @@ interface Community {
   iconSource: any;
   chats: Chat[];
 }
+
+interface Call {
+  user: {
+    name: string;
+    picSource: any;
+  };
+  count: number;
+  time: Date;
+  incoming: boolean;
+  missed: boolean;
+}

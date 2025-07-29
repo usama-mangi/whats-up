@@ -26,7 +26,7 @@ function SearchBar() {
         tintColor="dark-100"
       />
       <TextInput
-        className="w-full"
+        className="flex-1 text-lg"
         placeholder="Ask Meta AI or Search"
         value={query}
         onChangeText={handleSearch}

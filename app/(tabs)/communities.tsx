@@ -17,36 +17,40 @@ export default function Communities() {
 
       <FlatList
         data={communities}
-        contentContainerClassName="pb-[20%]"
+        contentContainerClassName="pb-[25%]"
         renderItem={({ item }) => <CommunityCard community={item} />}
         ItemSeparatorComponent={() => <View className="h-2 bg-[#f2f3f4]" />}
-        ListHeaderComponent={() => (
-          <>
-            <TouchableWithoutFeedback>
-              <View className="flex flex-row items-center gap-4 mx-5 my-4">
-                <View className="bg-[#ccc] p-2 rounded-xl relative">
-                  <Image
-                    source={images.userGroup}
-                    className="size-10"
-                    tintColor="white"
-                  />
-                  <View className="absolute -bottom-1 -right-1 p-1.5 flex items-center justify-center bg-green-600 rounded-full border border-white">
-                    <Image
-                      source={images.plus}
-                      className="size-2.5"
-                      tintColor="white"
-                    />
-                  </View>
-                </View>
-
-                <Text className="text-lg font-medium">New community</Text>
-              </View>
-            </TouchableWithoutFeedback>
-
-            <View className="h-2 bg-[#f2f3f4]" />
-          </>
-        )}
+        ListHeaderComponent={() => <AddCommunityHeader />}
       />
     </SafeAreaView>
   );
+
+  function AddCommunityHeader() {
+    return (
+      <>
+        <TouchableWithoutFeedback>
+          <View className="flex flex-row items-center gap-4 px-5 py-4 active:bg-gray-300">
+            <View className="bg-[#ccc] p-2 rounded-xl relative">
+              <Image
+                source={images.userGroup}
+                className="size-10"
+                tintColor="white"
+              />
+              <View className="absolute -bottom-1 -right-1 p-1.5 flex items-center justify-center bg-green-600 rounded-full border border-white">
+                <Image
+                  source={images.plus}
+                  className="size-2.5"
+                  tintColor="white"
+                />
+              </View>
+            </View>
+
+            <Text className="text-lg font-medium">New community</Text>
+          </View>
+        </TouchableWithoutFeedback>
+
+        <View className="h-2 bg-[#f2f3f4]" />
+      </>
+    );
+  }
 }

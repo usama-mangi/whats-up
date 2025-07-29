@@ -62,7 +62,9 @@ function TabsLayout() {
             tabBarIcon: ({ focused }) => (
               <TabBarIcon
                 focused={focused}
-                icon={images.chatBubble}
+                icon={
+                  focused ? images.chatBubbleFilled : images.chatBubbleOutlined
+                }
                 title="Home"
               />
             ),

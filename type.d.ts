@@ -154,4 +154,9 @@ interface Channel {
   imageSource: any;
 }
 
-interface;
+interface Community {
+  id: string;
+  name: string;
+  iconSource: any;
+  chats: Chat[];
+}

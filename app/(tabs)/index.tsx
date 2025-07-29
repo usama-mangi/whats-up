@@ -12,8 +12,8 @@ export default function Index() {
     <SafeAreaView className="h-full bg-white">
       <CustomHeader
         title="WhatsUp"
-        titleClasses="text-[#28aa28] font-semibold"
-        rightIcon={images.bag}
+        titleClasses="text-green-600 font-semibold"
+        rightIcon={images.camera}
         moreOptionsDialog={[]}
       />
 

@@ -22,7 +22,7 @@ export default function ChatItem({ chat }: { chat: Chat }) {
         </TouchableOpacity>
         <View className="flex justify-between flex-1">
           <View className="flex flex-row justify-between items-center">
-            <Text className="font-quicksand-semibold text-lg">{chat.name}</Text>
+            <Text className="font-medium text-lg">{chat.name}</Text>
             <Text className="text-gray-200 text-sm">
               {getHourMin(chat.lastMessage.time)}
             </Text>

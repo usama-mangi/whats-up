@@ -24,14 +24,14 @@ function CustomHeader({
           {rightIcon && (
             <Image
               source={rightIcon}
-              className="size-5"
+              className="size-6"
               tintColor="black"
               resizeMode="contain"
             />
           )}
           <Image
-            source={images.pencil}
-            className="size-5"
+            source={images.ellipsis}
+            className="size-6"
             tintColor="black"
             resizeMode="contain"
           />

@@ -60,7 +60,11 @@ function TabsLayout() {
           options={{
             title: "Chats",
             tabBarIcon: ({ focused }) => (
-              <TabBarIcon focused={focused} icon={images.home} title="Home" />
+              <TabBarIcon
+                focused={focused}
+                icon={images.chatBubble}
+                title="Home"
+              />
             ),
           }}
         />
@@ -71,7 +75,7 @@ function TabsLayout() {
             tabBarIcon: ({ focused }) => (
               <TabBarIcon
                 focused={focused}
-                icon={images.star}
+                icon={images.status}
                 title="Updates"
               />
             ),
@@ -84,7 +88,7 @@ function TabsLayout() {
             tabBarIcon: ({ focused }) => (
               <TabBarIcon
                 focused={focused}
-                icon={images.location}
+                icon={images.userGroup}
                 title="Communities"
               />
             ),

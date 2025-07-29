@@ -1,28 +1,31 @@
-import arrowBack from "../assets/icons/arrow-back.png";
-import arrowDown from "@/assets/icons/arrow-down.png";
-import arrowRight from "@/assets/icons/arrow-right.png";
-import bag from "@/assets/icons/bag.png";
-import check from "@/assets/icons/check.png";
-import clock from "@/assets/icons/clock.png";
-import dollar from "@/assets/icons/dollar.png";
-import envelope from "@/assets/icons/envelope.png";
-import home from "@/assets/icons/home.png";
-import location from "@/assets/icons/location.png";
+import archive from "@/assets/icons/archive.png";
+import arrowBack from "@/assets/icons/arrow-back.png";
+import camera from "@/assets/icons/camera.png";
+import chatBubble from "@/assets/icons/chat-bubble.png";
+import chevronRight from "@/assets/icons/chevron-right.png";
+import ellipsis from "@/assets/icons/ellipsis-vertical.png";
 import logout from "@/assets/icons/logout.png";
 import minus from "@/assets/icons/minus.png";
 import pencil from "@/assets/icons/pencil.png";
-import person from "@/assets/icons/person.png";
 import phone from "@/assets/icons/phone.png";
 import plus from "@/assets/icons/plus.png";
 import search from "@/assets/icons/search.png";
-import star from "@/assets/icons/star.png";
+import status from "@/assets/icons/status.png";
 import trash from "@/assets/icons/trash.png";
 import user from "@/assets/icons/user.png";
+import userGroup from "@/assets/icons/user-group.png";
 
 import avatar from "@/assets/images/avatar.png";
 import statusBg from "@/assets/images/status.jpg";
 import success from "@/assets/images/success.png";
-import { Category, Channel, Chat, PopulatedStatus, User } from "@/type";
+import {
+  Category,
+  Channel,
+  Chat,
+  Community,
+  PopulatedStatus,
+  User,
+} from "@/type";
 
 export const users: User[] = [
   {
@@ -498,28 +501,57 @@ export const channels: Channel[] = [
   },
 ];
 
+export const communities: Community[] = [
+  {
+    id: "501",
+    name: "iCodeGuru Announcements",
+    iconSource: userGroup,
+    chats: [chats[0], chats[1], chats[2]],
+  },
+  {
+    id: "502",
+    name: "GDGoC CUI x Web Development",
+    iconSource: userGroup,
+    chats: [chats[3], chats[4]],
+  },
+  {
+    id: "503",
+    name: "Software Engineers",
+    iconSource: userGroup,
+    chats: [chats[5], chats[6], chats[7]],
+  },
+  {
+    id: "504",
+    name: "Machine Learning Pakistan",
+    iconSource: userGroup,
+    chats: [chats[8], chats[9]],
+  },
+  {
+    id: "505",
+    name: "Mentor Tech Club",
+    iconSource: userGroup,
+    chats: [chats[0], chats[2], chats[1]],
+  },
+];
+
 export const images = {
-  avatar,
-  success,
+  archive,
   arrowBack,
-  arrowDown,
-  arrowRight,
-  bag,
-  check,
-  clock,
-  dollar,
-  envelope,
-  home,
-  location,
+  avatar,
+  camera,
+  chatBubble,
+  chevronRight,
+  ellipsis,
   logout,
   minus,
   pencil,
-  person,
   phone,
   plus,
   search,
-  star,
+  status,
   statusBg,
+  success,
   trash,
   user,
+  userGroup,
 };

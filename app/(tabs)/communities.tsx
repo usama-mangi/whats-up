@@ -1,6 +1,6 @@
 import CommunityCard from "@/components/CommunityCard";
 import CustomHeader from "@/components/CustomHeader";
-import { communities, images } from "@/constants";
+import { communities, icons } from "@/constants";
 import {
   FlatList,
   Image,
@@ -32,14 +32,14 @@ export default function Communities() {
           <View className="flex flex-row items-center gap-4 px-5 py-4 active:bg-gray-300">
             <View className="bg-[#ccc] p-2 rounded-xl relative">
               <Image
-                source={images.userGroup}
+                source={icons.userGroupFilled}
                 className="size-10"
                 tintColor="white"
               />
-              <View className="absolute -bottom-1 -right-1 p-1.5 flex items-center justify-center bg-green-600 rounded-full border border-white">
+              <View className="absolute -bottom-1 -right-1 p-1 flex items-center justify-center bg-green-600 rounded-full border border-white">
                 <Image
-                  source={images.plus}
-                  className="size-2.5"
+                  source={icons.plus}
+                  className="size-4"
                   tintColor="white"
                 />
               </View>

@@ -1,4 +1,4 @@
-import { images } from "@/constants";
+import { icons, images } from "@/constants";
 import { Image, Text, View } from "react-native";
 
 export default function AddStatusCard() {
@@ -13,11 +13,7 @@ export default function AddStatusCard() {
             resizeMode="contain"
           />
           <View className="absolute -right-1.5 -bottom-1.5 bg-green-600 rounded-full p-1 border border-white">
-            <Image
-              source={images.plus}
-              className="size-2.5"
-              tintColor="white"
-            />
+            <Image source={icons.plus} className="size-3" tintColor="white" />
           </View>
         </View>
       </View>

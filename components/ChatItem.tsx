@@ -1,5 +1,6 @@
 import { getHourMin } from "@/lib/date-formatter";
 import { Chat } from "@/type";
+import { router } from "expo-router";
 import {
   Image,
   Text,
@@ -9,8 +10,12 @@ import {
 } from "react-native";
 
 export default function ChatItem({ chat }: { chat: Chat }) {
+  function handlePress() {
+    router.navigate(`/chat/${chat.id}`);
+  }
+
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback onPress={handlePress}>
       <View className="chat-item">
         <TouchableOpacity className="rounded-full object-contain">
           <Image

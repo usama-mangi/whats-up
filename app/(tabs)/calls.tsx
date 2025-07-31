@@ -1,7 +1,7 @@
 import CallItem from "@/components/CallItem";
 import CustomHeader from "@/components/CustomHeader";
 import EncryptedMessage from "@/components/EncryptedMessage";
-import { calls, images } from "@/constants";
+import { calls, icons } from "@/constants";
 import {
   FlatList,
   Image,
@@ -14,7 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Calls() {
   return (
     <SafeAreaView className="h-full bg-white">
-      <CustomHeader title="Calls" rightIcon={images.search} />
+      <CustomHeader title="Calls" rightIcon={icons.search} />
 
       <FlatList
         showsVerticalScrollIndicator={false}
@@ -31,7 +31,7 @@ export default function Calls() {
               <View className="my-4 flex flex-row gap-4 items-center">
                 <View className="bg-[#22a55e] p-3 rounded-full">
                   <Image
-                    source={images.heart}
+                    source={icons.heartFilled}
                     className="size-5"
                     tintColor="white"
                   />

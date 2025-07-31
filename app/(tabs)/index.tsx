@@ -4,7 +4,7 @@ import CustomHeader from "@/components/CustomHeader";
 import EncryptedMessage from "@/components/EncryptedMessage";
 import Filter from "@/components/Filter";
 import SearchBar from "@/components/SearchBar";
-import { images, chats, categories } from "@/constants";
+import { chats, categories, icons } from "@/constants";
 import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -14,7 +14,7 @@ export default function Index() {
       <CustomHeader
         title="WhatsUp"
         titleClasses="text-green-600 font-semibold"
-        rightIcon={images.camera}
+        rightIcon={icons.camera}
         moreOptionsDialog={[]}
       />
 

@@ -1,24 +1,36 @@
 import archive from "@/assets/icons/archive.png";
-import arrowBack from "@/assets/icons/arrow-back.png";
+import arrowLeft from "@/assets/icons/arrow-left.png";
+import arrowRight from "@/assets/icons/arrow-right.png";
+import camcorder from "@/assets/icons/camcorder.png";
 import camera from "@/assets/icons/camera.png";
 import chatBubbleFilled from "@/assets/icons/chat-bubble-filled.png";
 import chatBubbleOutlined from "@/assets/icons/chat-bubble-outlined.png";
+import chatBubbleOval from "@/assets/icons/chat-bubble-oval.png";
 import chevronRight from "@/assets/icons/chevron-right.png";
 import ellipsis from "@/assets/icons/ellipsis-vertical.png";
-import heart from "@/assets/icons/heart.png";
+import emoji from "@/assets/icons/emoji.png";
+import forward from "@/assets/icons/forward.png";
+import heartFilled from "@/assets/icons/heart-filled.png";
+import heartOutlined from "@/assets/icons/heart-outlined.png";
 import incoming from "@/assets/icons/incoming.png";
-import lock from "@/assets/icons/lock.png";
+import link from "@/assets/icons/link.png";
+import lockFilled from "@/assets/icons/lock-filled.png";
+import lockOutlined from "@/assets/icons/lock-outlined.png";
 import logout from "@/assets/icons/logout.png";
 import minus from "@/assets/icons/minus.png";
 import outgoing from "@/assets/icons/outgoing.png";
-import pencil from "@/assets/icons/pencil.png";
-import phone from "@/assets/icons/phone.png";
+import pencilFilled from "@/assets/icons/pencil-filled.png";
+import pencilOutlined from "@/assets/icons/lock-outlined.png";
+import phoneFilled from "@/assets/icons/phone-filled.png";
+import phoneOutlined from "@/assets/icons/phone-outlined.png";
 import plus from "@/assets/icons/plus.png";
 import search from "@/assets/icons/search.png";
-import status from "@/assets/icons/status.png";
+import statusFilled from "@/assets/icons/status-filled.png";
+import statusOutlined from "@/assets/icons/status-outlined.png";
 import trash from "@/assets/icons/trash.png";
 import user from "@/assets/icons/user.png";
-import userGroup from "@/assets/icons/user-group.png";
+import userGroupFilled from "@/assets/icons/user-group-filled.png";
+import userGroupOutline from "@/assets/icons/user-group-outlined.png";
 
 import avatar from "@/assets/images/avatar.png";
 import statusBg from "@/assets/images/status.jpg";
@@ -29,6 +41,7 @@ import {
   Channel,
   Chat,
   Community,
+  PopulatedMessage,
   PopulatedStatus,
   User,
 } from "@/type";
@@ -266,6 +279,99 @@ export const chats: Chat[] = [
       time: new Date(2025, 7, 28, 12, 2, 35),
     },
     unreadCount: 2,
+  },
+];
+
+export const messages: PopulatedMessage[] = [
+  {
+    chatId: "201",
+    sentBy: {
+      id: "101",
+      name: "Shahzeb",
+      email: "shahzeb@gmail.com",
+      phone: "03123456789",
+      isOnline: true,
+      lastSeen: new Date(2025, 7, 28, 12, 2, 35),
+      picSource: avatar,
+    },
+    content: {
+      text: "https://www.facebook.com/share/v/16eBngtthc/",
+    },
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+  {
+    chatId: "201",
+    sentBy: {
+      id: "102",
+      name: "Samian",
+      email: "samian@gmail.com",
+      phone: "03123456789",
+      isOnline: true,
+      lastSeen: new Date(2025, 7, 28, 12, 2, 35),
+      picSource: avatar,
+    },
+    content: {
+      text: "😂 Bha ehro talent be aahy cha pakistan main",
+    },
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+  {
+    chatId: "201",
+    sentBy: {
+      id: "101",
+      name: "Shahzeb",
+      email: "shahzeb@gmail.com",
+      phone: "03123456789",
+      isOnline: true,
+      lastSeen: new Date(2025, 7, 28, 12, 2, 35),
+      picSource: avatar,
+    },
+    content: {
+      text: "Au paanr heraan rehji wayas",
+    },
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+  {
+    chatId: "201",
+    sentBy: {
+      id: "102",
+      name: "Samian",
+      email: "samian@gmail.com",
+      phone: "03123456789",
+      isOnline: true,
+      lastSeen: new Date(2025, 7, 28, 12, 2, 35),
+      picSource: avatar,
+    },
+    content: {
+      text: "Jani agar sabh talented thi wanjan ta looteenda kehen khen.\n\n Hane khabr pawe thi kehen khe looteenda 😁",
+    },
+    time: new Date(2025, 7, 28, 12, 2, 35),
+  },
+  {
+    chatId: "201",
+    sentBy: {
+      id: "105",
+      name: "Ghulam Mustafa",
+      email: "mustafa@gmail.com",
+      phone: "03123456789",
+      isOnline: true,
+      lastSeen: new Date(2025, 7, 28, 12, 2, 35),
+      picSource: avatar,
+    },
+    content: {
+      text: `eShifa is looking for an  "App Developer".
+
+      ➡️ Senior Mobile Application Developer(Remote,Hybrid)
+      ➡️ Junior Mobile Application Developer(Islamabad)
+      
+      Location: Islamabad
+      Deadline: August 3, 2025
+
+      Join our incredible team by sending your application to eshifa.msa@eshifa.org.
+
+      *Please don't forget to mention the position you are applying for in the email subject.*`,
+    },
+    time: new Date(2025, 7, 28, 12, 2, 35),
   },
 ];
 
@@ -511,31 +617,31 @@ export const communities: Community[] = [
   {
     id: "501",
     name: "iCodeGuru Announcements",
-    iconSource: userGroup,
+    iconSource: userGroupFilled,
     chats: [chats[0], chats[1], chats[2]],
   },
   {
     id: "502",
     name: "GDGoC CUI x Web Development",
-    iconSource: userGroup,
+    iconSource: userGroupFilled,
     chats: [chats[3], chats[4]],
   },
   {
     id: "503",
     name: "Software Engineers",
-    iconSource: userGroup,
+    iconSource: userGroupFilled,
     chats: [chats[5], chats[6], chats[7]],
   },
   {
     id: "504",
     name: "Machine Learning Pakistan",
-    iconSource: userGroup,
+    iconSource: userGroupFilled,
     chats: [chats[8], chats[9]],
   },
   {
     id: "505",
     name: "Mentor Tech Club",
-    iconSource: userGroup,
+    iconSource: userGroupFilled,
     chats: [chats[0], chats[2], chats[1]],
   },
 ];
@@ -584,28 +690,43 @@ export const calls: Call[] = [
 ];
 
 export const images = {
-  archive,
-  arrowBack,
   avatar,
+  statusBg,
+  success,
+};
+
+export const icons = {
+  archive,
+  arrowLeft,
+  arrowRight,
+  camcorder,
   camera,
   chatBubbleFilled,
   chatBubbleOutlined,
+  chatBubbleOval,
   chevronRight,
   ellipsis,
-  heart,
+  emoji,
+  forward,
+  heartFilled,
+  heartOutlined,
   incoming,
-  lock,
+  link,
+  lockFilled,
+  lockOutlined,
   logout,
   minus,
   outgoing,
-  pencil,
-  phone,
+  pencilFilled,
+  pencilOutlined,
+  phoneFilled,
+  phoneOutlined,
   plus,
   search,
-  status,
-  statusBg,
-  success,
+  statusFilled,
+  statusOutlined,
   trash,
   user,
-  userGroup,
+  userGroupFilled,
+  userGroupOutline,
 };

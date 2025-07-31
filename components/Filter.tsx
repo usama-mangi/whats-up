@@ -3,7 +3,7 @@ import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { Text, FlatList, TouchableOpacity, Image } from "react-native";
 import cn from "clsx";
-import { images } from "@/constants";
+import { icons } from "@/constants";
 
 function Filter({ categories }: { categories: Category[] }) {
   const searchParms = useLocalSearchParams();
@@ -43,10 +43,10 @@ function Filter({ categories }: { categories: Category[] }) {
       )}
       ListFooterComponent={
         <TouchableOpacity
-          className="filter py-2.5 px-5"
+          className="filter px-5"
           onPress={() => console.log("Add category")}
         >
-          <Image source={images.plus} className="size-3" tintColor="#444" />
+          <Image source={icons.plus} className="size-5" tintColor="#444" />
         </TouchableOpacity>
       }
     />

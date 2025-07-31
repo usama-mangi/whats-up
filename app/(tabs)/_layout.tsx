@@ -1,30 +1,27 @@
-import { images } from "@/constants";
+import { icons } from "@/constants";
 // import useAuthStore from "@/store/auth.store";
 import { TabBarIconProps } from "@/type";
 import cn from "clsx";
 import { Redirect, Tabs } from "expo-router";
 import { Image, StatusBar, Text, View } from "react-native";
 
-function TabBarIcon({ focused, icon, title }: TabBarIconProps) {
+function TabBarIcon({ focused, icon, iconClassname, title }: TabBarIconProps) {
   return (
     <View className="tab-icon">
       <View
         className={cn(
           "w-20 flex items-center p-1 rounded-full",
-          focused && "bg-[#58f15355]",
+          focused && "bg-green-200",
         )}
       >
         <Image
           source={icon}
-          className="size-7"
-          tintColor={focused ? "#1C892D" : "#000"}
+          className={cn("size-7", iconClassname)}
+          tintColor={focused ? "#14532d" : "#444"}
         />
       </View>
       <Text
-        className={cn(
-          "text-sm",
-          focused ? "font-quicksand-bold" : "font-quicksand-semibold",
-        )}
+        className={cn("text-sm", focused ? "font-semibold" : "font-medium")}
       >
         {title}
       </Text>
@@ -58,14 +55,13 @@ function TabsLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: "Chats",
             tabBarIcon: ({ focused }) => (
               <TabBarIcon
                 focused={focused}
                 icon={
-                  focused ? images.chatBubbleFilled : images.chatBubbleOutlined
+                  focused ? icons.chatBubbleFilled : icons.chatBubbleOutlined
                 }
-                title="Home"
+                title="Chats"
               />
             ),
           }}
@@ -73,11 +69,10 @@ function TabsLayout() {
         <Tabs.Screen
           name="updates"
           options={{
-            title: "Updates",
             tabBarIcon: ({ focused }) => (
               <TabBarIcon
                 focused={focused}
-                icon={images.status}
+                icon={focused ? icons.statusFilled : icons.statusOutlined}
                 title="Updates"
               />
             ),
@@ -86,11 +81,10 @@ function TabsLayout() {
         <Tabs.Screen
           name="communities"
           options={{
-            title: "Communities",
             tabBarIcon: ({ focused }) => (
               <TabBarIcon
                 focused={focused}
-                icon={images.userGroup}
+                icon={focused ? icons.userGroupFilled : icons.userGroupOutline}
                 title="Communities"
               />
             ),
@@ -99,9 +93,13 @@ function TabsLayout() {
         <Tabs.Screen
           name="calls"
           options={{
-            title: "Calls",
             tabBarIcon: ({ focused }) => (
-              <TabBarIcon focused={focused} icon={images.phone} title="Calls" />
+              <TabBarIcon
+                focused={focused}
+                icon={focused ? icons.phoneFilled : icons.phoneOutlined}
+                iconClassname="!size-6 my-0.5"
+                title="Calls"
+              />
             ),
           }}
         />

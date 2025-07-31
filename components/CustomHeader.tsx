@@ -1,4 +1,4 @@
-import { images } from "@/constants";
+import { icons } from "@/constants";
 import { CustomHeaderProps } from "@/type";
 import { View, Text, Image } from "react-native";
 import cn from "clsx";
@@ -30,7 +30,7 @@ function CustomHeader({
             />
           )}
           <Image
-            source={images.ellipsis}
+            source={icons.ellipsis}
             className="size-6"
             tintColor="black"
             resizeMode="contain"

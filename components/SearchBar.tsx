@@ -1,4 +1,4 @@
-import { images } from "@/constants";
+import { icons } from "@/constants";
 import { router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { Image, TextInput, View } from "react-native";
@@ -20,7 +20,7 @@ function SearchBar() {
   return (
     <View className="searchbar">
       <Image
-        source={images.search}
+        source={icons.search}
         className="size-6"
         resizeMode="contain"
         tintColor="dark-100"

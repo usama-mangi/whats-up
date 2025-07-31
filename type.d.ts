@@ -14,6 +14,7 @@ type ProfileOptions =
 interface TabBarIconProps {
   focused: boolean;
   icon: ImageSourcePropType;
+  iconClassname?: string;
   title: string;
 }
 
@@ -111,6 +112,9 @@ interface Message {
   sentBy: string;
   content: MessageContent;
   time: Date;
+}
+interface PopulatedMessage extends Message {
+  sentBy: User;
 }
 
 interface MessageContent {

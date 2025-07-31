@@ -1,4 +1,4 @@
-import { images } from "@/constants";
+import { icons } from "@/constants";
 import { getDateTime } from "@/lib/date-formatter";
 import { Call } from "@/type";
 import {
@@ -11,8 +11,6 @@ import {
 import cn from "clsx";
 
 export default function CallItem({ call }: { call: Call }) {
-  const tintColor = call.incoming ? (call.missed ? "red" : "green") : "blue";
-
   return (
     <TouchableWithoutFeedback>
       <View className="chat-item">
@@ -36,7 +34,7 @@ export default function CallItem({ call }: { call: Call }) {
             </Text>
             <View className="flex flex-row gap-2 items-center">
               <Image
-                source={call.incoming ? images.incoming : images.outgoing}
+                source={call.incoming ? icons.incoming : icons.outgoing}
                 className="size-3"
                 tintColor={call.missed ? "red" : "green"}
               />
@@ -44,7 +42,11 @@ export default function CallItem({ call }: { call: Call }) {
             </View>
           </View>
           <View className="">
-            <Image source={images.phone} className="size-6" tintColor="#444" />
+            <Image
+              source={icons.phoneOutlined}
+              className="size-5"
+              tintColor="#444"
+            />
           </View>
         </View>
       </View>

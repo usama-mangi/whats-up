@@ -1,7 +1,7 @@
 import { Community } from "@/type";
 import { Image, Text, TouchableWithoutFeedback, View } from "react-native";
 import ChatItem from "./ChatItem";
-import { images } from "@/constants";
+import { icons } from "@/constants";
 
 export default function CommunityCard({ community }: { community: Community }) {
   return (
@@ -32,7 +32,7 @@ export default function CommunityCard({ community }: { community: Community }) {
             <View className="flex flex-row gap-4 items-center px-5 py-[0.225rem]">
               <View className="flex items-center justify-center size-14">
                 <Image
-                  source={images.chevronRight}
+                  source={icons.chevronRight}
                   className="size-3"
                   tintColor="#6b7280"
                 />

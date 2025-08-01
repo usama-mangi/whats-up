@@ -1,6 +1,7 @@
 import archive from "@/assets/icons/archive.png";
 import arrowLeft from "@/assets/icons/arrow-left.png";
 import arrowRight from "@/assets/icons/arrow-right.png";
+import attachment from "@/assets/icons/attachment.png";
 import camcorder from "@/assets/icons/camcorder.png";
 import camera from "@/assets/icons/camera.png";
 import chatBubbleFilled from "@/assets/icons/chat-bubble-filled.png";
@@ -8,15 +9,15 @@ import chatBubbleOutlined from "@/assets/icons/chat-bubble-outlined.png";
 import chatBubbleOval from "@/assets/icons/chat-bubble-oval.png";
 import chevronRight from "@/assets/icons/chevron-right.png";
 import ellipsis from "@/assets/icons/ellipsis-vertical.png";
-import emoji from "@/assets/icons/emoji.png";
 import forward from "@/assets/icons/forward.png";
 import heartFilled from "@/assets/icons/heart-filled.png";
 import heartOutlined from "@/assets/icons/heart-outlined.png";
 import incoming from "@/assets/icons/incoming.png";
-import link from "@/assets/icons/link.png";
 import lockFilled from "@/assets/icons/lock-filled.png";
 import lockOutlined from "@/assets/icons/lock-outlined.png";
 import logout from "@/assets/icons/logout.png";
+import micFilled from "@/assets/icons/mic-filled.png";
+import micOutlined from "@/assets/icons/mic-outlined.png";
 import minus from "@/assets/icons/minus.png";
 import outgoing from "@/assets/icons/outgoing.png";
 import pencilFilled from "@/assets/icons/pencil-filled.png";
@@ -25,8 +26,10 @@ import phoneFilled from "@/assets/icons/phone-filled.png";
 import phoneOutlined from "@/assets/icons/phone-outlined.png";
 import plus from "@/assets/icons/plus.png";
 import search from "@/assets/icons/search.png";
+import send from "@/assets/icons/send.png";
 import statusFilled from "@/assets/icons/status-filled.png";
 import statusOutlined from "@/assets/icons/status-outlined.png";
+import sticker from "@/assets/icons/sticker.png";
 import trash from "@/assets/icons/trash.png";
 import user from "@/assets/icons/user.png";
 import userGroupFilled from "@/assets/icons/user-group-filled.png";
@@ -699,6 +702,7 @@ export const icons = {
   archive,
   arrowLeft,
   arrowRight,
+  attachment,
   camcorder,
   camera,
   chatBubbleFilled,
@@ -706,15 +710,15 @@ export const icons = {
   chatBubbleOval,
   chevronRight,
   ellipsis,
-  emoji,
   forward,
   heartFilled,
   heartOutlined,
   incoming,
-  link,
   lockFilled,
   lockOutlined,
   logout,
+  micFilled,
+  micOutlined,
   minus,
   outgoing,
   pencilFilled,
@@ -723,8 +727,10 @@ export const icons = {
   phoneOutlined,
   plus,
   search,
+  send,
   statusFilled,
   statusOutlined,
+  sticker,
   trash,
   user,
   userGroupFilled,
